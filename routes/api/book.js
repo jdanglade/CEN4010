@@ -5,12 +5,16 @@ router.post("/getBook", (req, res) => {
     books.getBook(req.body,(status, data = "ok") => res.status(status).send(data));
 });
 
-router.post("/getAllBook", (req, res) => {
-    books.getAllBook(req.body,(status, data = "ok") => res.status(status).send(data));
+router.post("/getAllBooks", (req, res) => {
+    books.getAllBooks(req.body,(status, data = "ok") => res.status(status).send(data));
 });
 
 router.post("/getBooksByPage", (req, res) => {
     books.getBooksByPage(req.body,(status, data = "ok") => res.status(status).send(data));
+});
+
+router.post("/addBookReview", (req, res) => {
+    books.addBookReview(req.body,(status, data = "ok") => res.status(status).send(data));
 });
 
 router.post("/getBookByAuthor", (req, res) => {
